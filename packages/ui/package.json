@@ -15,5 +15,9 @@
     "react": "^17.0.2",
     "tsconfig": "*",
     "typescript": "^4.5.2"
+  },
+  "dependencies": {
+    "next": "^13.3.0",
+    "react-dom": "^18.2.0"
   }
 }
