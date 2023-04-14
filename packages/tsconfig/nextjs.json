@@ -5,7 +5,7 @@
   "compilerOptions": {
     "allowJs": true,
     "declaration": false,
-    "declarationMap": false,
+    "declarationMap": false,  
     "incremental": true,
     "jsx": "preserve",
     "lib": ["dom", "dom.iterable", "esnext"],
