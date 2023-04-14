@@ -1,5 +1,5 @@
-import { Button } from "ui";
-
+import { Button } from "@lib/core";
+import React from "react";
 export default function Web() {
   return (
     <div>

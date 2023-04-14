@@ -1,20 +1,20 @@
 {
-  "name": "docs",
+  "name": "@lib/docs",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "next dev --port 3001",
-    "build": "storybook build",
+    "dev": "start-storybook -p 6000",
+    "build": "storybook build --docs",
     "start": "next start",
     "lint": "next lint",
-    "storybook": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "preview-storybook": "serve storybook-static"
   },
   "dependencies": {
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "ui": "*"
+    "@lib/core": "*"
   },
   "devDependencies": {
     "@babel/preset-env": "^7.21.4",
