@@ -1,10 +1,14 @@
 {
-  "name": "@lib/utils",
+  "name": "lib-utils",
   "version": "0.0.0",
   "description": "Shared React utilities",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.mjs",
+  "files": [
+    "dist/**"
+  ],
+  "private": true,
   "scripts": {
     "build": "tsup src/index.ts --format esm,cjs --dts --external react",
     "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
@@ -22,7 +26,7 @@
     "react-dom": "^18.2.0",
     "tsup": "^6.7.0",
     "typescript": "^5.0.4",
-    "eslint-config-custom": "*",
+    "@lib/eslint-config-custom": "*",
     "tsconfig": "*"
   }
 }

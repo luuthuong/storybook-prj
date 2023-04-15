@@ -1,0 +1,1 @@
+export type CategoryDocType = 'Component' | 'Theme' | 'Layout';

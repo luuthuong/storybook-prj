@@ -1,10 +1,8 @@
-import { Button } from "@lib/core";
 import React from "react";
 export default function Web() {
   return (
     <div>
       <h1>Web</h1>
-      <Button />
     </div>
   );
 }

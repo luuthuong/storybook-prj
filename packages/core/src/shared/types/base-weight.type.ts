@@ -1,0 +1,1 @@
+export type BaseWeightType =  'light' | 'normal' | 'bold' | 'extrabold' | 'black';

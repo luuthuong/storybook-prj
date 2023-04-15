@@ -1,0 +1,1 @@
+export type BaseSizeType = 'xs' | 'sm' | 'md' | 'lg' | 'xl';

@@ -1,10 +1,13 @@
 {
     "extends": "tsconfig/react-library.json",
-    "include": ["."],
+    "include": [
+      "./src/**/*",
+    ],
     "exclude": ["dist", "build", "node_modules"],
     "compilerOptions": {
         "paths": {
-        //   "@base/*" : ["./src/*"]
+          "@core/*": ["./src/*"]
         },
+        "module": "ESNext" 
       }
 }

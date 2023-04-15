@@ -1,17 +1,16 @@
 {
-  "name": "@lib/docs",
+  "name": "app-docs",
   "version": "1.0.0",
   "private": true,
   "scripts": {
-    "dev": "storybook dev --port 8000 ",
+    "dev": "storybook dev --port 8000 --no-open",
     "build": "storybook build --docs",
     "start": "next start",
     "lint": "next lint",
-    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
+    "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf storybook-static",
     "preview-storybook": "serve storybook-static"
   },
   "dependencies": {
-    "@lib/core": "*",
     "next": "latest",
     "react": "^18.2.0",
     "react-dom": "^18.2.0"
@@ -31,7 +30,7 @@
     "@types/node": "^17.0.12",
     "@types/react": "^18.0.22",
     "@types/react-dom": "^18.0.7",
-    "eslint-config-custom": "*",
+    "@lib/eslint-config-custom": "*",
     "prop-types": "^15.8.1",
     "storybook": "^7.0.4",
     "tsconfig": "*",

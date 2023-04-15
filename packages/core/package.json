@@ -1,28 +1,43 @@
 {
-  "name": "@lib/core",
-  "version": "1.0.0",
+  "name": "kit-ui-react",
+  "private": false,
+  "version": "0.0.1",
   "description": "Package React core components",
   "main": "./dist/index.js",
   "types": "./dist/index.d.ts",
   "module": "./dist/index.mjs",
+  "files": [
+    "dist/**"
+  ],
   "scripts": {
-    "dev": "tsup index.ts --format esm,cjs --watch --dts --external react",
-    "build": "tsup index.ts --format esm,cjs --watch --dts --external react",
+    "dev": "tsup --watch",
+    "build": "tsup ",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
     "lint": "eslint \"**/*.ts*\""
   },
-  "author": "",
+  "author": "thuong",
   "license": "ISC",
   "dependencies": {
     "@types/react-dom": "^18.0.11",
-    "eslint": "^8.38.0",
-    "eslint-config-custom": "*",
+    "@types/styled-components": "^5.1.26",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "tailwindcss": "^3.3.1",
-    "tsconfig": "*",
-    "tsup": "^6.7.0",
+    "styled-components": "^5.3.9",
     "typescript": "^5.0.4"
+  },
+  "peerDependencies": {
+    "@types/react-dom": "^18.0.11",
+    "react": "^18.2.0",
+    "react-dom": "^18.2.0",
+    "styled-components": "^5.3.9"
+  },
+  "devDependencies": {
+    "@lib/eslint-config-custom": "*",
+    "@types/react": "^18.0.35",
+    "autoprefixer": "^10.4.14",
+    "eslint": "^8.38.0",
+    "tsconfig": "*",
+    "tsup": "^6.7.0"
   }
 }
