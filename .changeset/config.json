@@ -8,7 +8,6 @@
   "baseBranch": "main",
   "updateInternalDependencies": "patch",
   "ignore": [
-    "app-docs",
-    "app-web"
+    "app-docs"
   ]
 }
