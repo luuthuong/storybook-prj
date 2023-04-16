@@ -30,34 +30,15 @@ var __toCommonJS = (mod) => __copyProps(__defProp({}, "__esModule", { value: tru
 // index.ts
 var core_exports = {};
 __export(core_exports, {
+  ButtonColorDefault: () => ButtonColorDefault,
   ButtonKit: () => ButtonKit,
-  WrapperContainer: () => WrapperContainer
+  ColorVariables: () => ColorVariables,
+  ColorsDefault: () => ColorsDefault
 });
 module.exports = __toCommonJS(core_exports);
 
-// src/components/Wrapper/wraper.styled.ts
-var import_styled_components = __toESM(require("styled-components"));
-var Title = import_styled_components.default.h1`
-  font-size: 1.5em;
-  text-align: center;
-  color: palevioletred;
-`;
-var Wrapper = import_styled_components.default.section`
-  padding: 4em;
-  background: papayawhip;
-`;
-
-// src/components/Wrapper/wraper.tsx
-var import_jsx_runtime = require("react/jsx-runtime");
-var WrapperContainer = () => {
-  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Wrapper, { children: /* @__PURE__ */ (0, import_jsx_runtime.jsx)(Title, { children: "Hello World!" }) });
-};
-
-// src/components/Avatar/Avatar.tsx
-var import_jsx_runtime2 = require("react/jsx-runtime");
-
 // src/components/Button/button.styled.ts
-var import_styled_components2 = __toESM(require("styled-components"));
+var import_styled_components = __toESM(require("styled-components"));
 
 // src/shared/assets/colors.ts
 var ColorsDefault = {
@@ -68,34 +49,33 @@ var ColorsDefault = {
   warning: "#f5a524",
   error: "#f31260"
 };
+var ColorVariables = {
+  boxShadow: "#dfd9d9",
+  textShadow: "#bcb4b4"
+};
 
 // src/components/Button/button.type.ts
 var ButtonColorDefault = {
   ...ColorsDefault,
-  cyan: "##06B7DB"
+  cyan: "#06B7DB"
 };
 
 // src/components/Button/button.styled.ts
-var Button = import_styled_components2.default.button.attrs((props) => props)`
+var Button = import_styled_components.default.button.attrs((props) => props)`
     background-color: ${(props) => props.color ? ButtonColorDefault[props.color] : ButtonColorDefault["default"]};
+    min-width: 125px;
     border: none;
-    padding: 1rem;
+    padding: .75rem;
     font-size: 1rem;
-    border-radius: 1rem;
-    color: lightcoral;
-    box-shadow: 0 0.2rem #dfd9d9;
+    border-radius: .75rem;
+    box-shadow: 0 0.2rem ${ColorVariables.boxShadow};
     cursor: pointer;
     color: #FFF;
     &:active{
-        color: white;
-        box-shadow: 0 0.1rem #dfd9d9;
+        box-shadow: 0 0.1rem ${ColorVariables.boxShadow};
         transform: translateY(0.2rem);
     }
-    &:hover:not(:disabled) {
-        background: lightcoral;
-        color: white;
-        text-shadow: 0 0.1rem #bcb4b4;
-    }
+
     &:disabled {
         cursor: auto;
         color: grey;
@@ -103,21 +83,36 @@ var Button = import_styled_components2.default.button.attrs((props) => props)`
 `;
 
 // src/components/Button/Button.tsx
-var import_jsx_runtime3 = require("react/jsx-runtime");
+var import_jsx_runtime = require("react/jsx-runtime");
 var ButtonKit = ({
   size = "md",
   color = "default",
   text = "",
   type = "default",
+  customClass = "",
   ...props
 }) => {
-  return /* @__PURE__ */ (0, import_jsx_runtime3.jsx)(Button, { style: {
-    width: props.width || "auto",
-    height: props.height || "auto"
-  }, ...props, className: `${size}`, children: text });
+  return /* @__PURE__ */ (0, import_jsx_runtime.jsx)(
+    Button,
+    {
+      style: {
+        width: props.width || "auto",
+        height: props.height || "auto"
+      },
+      ...props,
+      color,
+      className: `${size} ${customClass}`,
+      children: text
+    }
+  );
 };
+
+// src/components/Avatar/Avatar.tsx
+var import_jsx_runtime2 = require("react/jsx-runtime");
 // Annotate the CommonJS export names for ESM import in node:
 0 && (module.exports = {
+  ButtonColorDefault,
   ButtonKit,
-  WrapperContainer
+  ColorVariables,
+  ColorsDefault
 });

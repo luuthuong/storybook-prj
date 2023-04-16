@@ -7,3 +7,8 @@ export const ColorsDefault: BaseColorType = {
     warning: "#f5a524",
     error: "#f31260"
 }
+
+export const ColorVariables = {
+    boxShadow: "#dfd9d9",
+    textShadow: "#bcb4b4"
+}

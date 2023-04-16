@@ -1,3 +1,2 @@
-export * from './Wrapper/wraper';
-export {default}  from './Avatar/Avatar';
-export * from './Button/Button';
+export * from './Button';
+export *  from './Avatar';

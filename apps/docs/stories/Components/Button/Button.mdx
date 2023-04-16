@@ -1,0 +1,45 @@
+import { Meta, Controls, Story } from '@storybook/blocks';
+
+import * as ButtonStories from './Button.stories.ts'
+
+<Meta name="Documentation" title="Component/Button" of={ButtonStories} />
+<style>
+    {
+        `
+            .group-btn{
+                width: 100%;
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                gap: 8px;
+            }
+            .margin-auto{
+                display: inline-block;
+                margin: 0 auto;
+            }
+        `
+    }
+</style>
+# Button
+    Buttons allow users to perform actions and choose with a single tap.
+# Definition
+    Button is a clickable interactive element that triggers a response.
+    You can place text and icons inside of a button.
+    Buttons are often used for form submissions and to toggle elements into view.
+## Usage
+    The component comes in different variants such as `primary`, `secondary`, `large` and `small` and able to easy custom styles which you can use to alter the look and feel of the button.
+## Inputs
+    Button has the following properties:
+    <div className="margin-auto">
+        <Story of={ButtonStories.Default}/>
+    </div>
+<Controls />
+
+### Theme color
+    The default theme `Button` is <i> default </i>.
+<div className="group-btn">
+    <Story of={ButtonStories.Default}/>
+    <Story of={ButtonStories.Primary}/>
+    <Story of={ButtonStories.Secondary}/>
+    <Story of={ButtonStories.Cyan}/>
+</div>

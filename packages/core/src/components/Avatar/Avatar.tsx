@@ -1,7 +1,7 @@
 
-type AvatarProps = {
-    src: string
-};
+// type AvatarProps = {
+//     src: string
+// };
 const Avatar = () => {
     return (
         <div>
