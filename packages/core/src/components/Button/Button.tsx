@@ -1,6 +1,6 @@
-import React, { DOMAttributes } from 'react';
-import ButtonProps from "./button.type";
+import { DOMAttributes } from 'react';
 import { Button } from './button.styled';
+import ButtonProps from "./button.type";
 
 export const ButtonKit = ({ 
     size ='md', 
@@ -16,6 +16,7 @@ export const ButtonKit = ({
         }
     } 
     {...(props as DOMAttributes<HTMLButtonElement>)} 
+    type={type}
     color={color} 
     className={`${size} ${customClass}`}
     >

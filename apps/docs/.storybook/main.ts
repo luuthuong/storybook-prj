@@ -1,4 +1,5 @@
 import type { StorybookConfig } from "@storybook/nextjs";
+const path = require('path');
 const config: StorybookConfig = {
   stories: [
     "../stories/**/*.mdx", 
@@ -8,7 +9,14 @@ const config: StorybookConfig = {
     "@storybook/addon-links",
     "@storybook/addon-essentials",
     "@storybook/addon-interactions",
-    "@storybook/addon-controls"
+    "@storybook/addon-controls",
+    'storybook-addon-next',
+    {
+      name: 'storybook-addon-next',
+      options: {
+        nextConfigPath: path.resolve(__dirname, '../next.config.js')
+      }
+    }
   ],
   framework: {
     name: "@storybook/nextjs",

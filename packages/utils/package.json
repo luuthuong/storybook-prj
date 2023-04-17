@@ -14,19 +14,21 @@
     "dev": "tsup src/index.ts --format esm,cjs --watch --dts --external react",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist",
     "test": "echo \"Error: no test specified\" && exit 1",
-    "lint": "next lint"
+    "lint": "eslint"
   },
   "author": "",
   "license": "ISC",
   "dependencies": {
-    "@types/react-dom": "^18.0.11",
-    "eslint": "^8.38.0",
     "next": "^13.3.0",
     "react": "^18.2.0",
-    "react-dom": "^18.2.0",
+    "react-dom": "^18.2.0"
+  },
+  "devDependencies": {
     "tsup": "^6.7.0",
     "typescript": "^5.0.4",
-    "@lib/eslint-config-custom": "*",
-    "tsconfig": "*"
+    "eslint-config-custom": "*",
+    "tsconfig": "*",
+    "@types/react-dom": "^18.0.11",
+    "eslint": "^8.38.0"
   }
 }

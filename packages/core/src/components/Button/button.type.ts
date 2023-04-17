@@ -1,5 +1,5 @@
-import { BaseColorType, BaseSizeType } from '@core/types';
-import { ColorsDefault } from '@core/variables';
+import { BaseColorType, BaseSizeType } from '../../types';
+import { ColorsDefault } from '../../variables';
 import { DOMAttributes } from 'react';
 
 export type ButtonSize = BaseSizeType;

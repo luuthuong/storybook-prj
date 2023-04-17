@@ -33,7 +33,9 @@
         "test"
       ]
     },
-    "lint": {},
+    "lint": {
+      "cache": false
+    },
     "dev": {
       "cache": false,
       "persistent": true
@@ -43,6 +45,9 @@
     },
     "start":{
       
+    },
+    "preview":{
+      "cache": false
     }
   }
 }

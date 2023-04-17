@@ -1,6 +1,6 @@
-import styled from "styled-components";
 import ButtonProps, { ButtonColorDefault } from "./button.type";
-import { ColorVariables } from "@core/variables";
+import { ColorVariables } from "../../variables";
+import styled from "styled-components";
 export const Button = styled.button.attrs((props: ButtonProps) => props)`
     background-color: ${
         props => props.color ? ButtonColorDefault[props.color] 
