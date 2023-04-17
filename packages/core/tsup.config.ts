@@ -1,6 +1,6 @@
 import { defineConfig } from "tsup";
 export default defineConfig({
-    entry: ['./index.ts'],
+    entry: ['./src'],
     format: ['cjs','esm'],
     bundle: true,
     external: [
@@ -10,5 +10,7 @@ export default defineConfig({
     outDir: './dist',
     tsconfig: 'tsconfig.json',
     dts: true,
-    clean: true
+    clean: true,
+    splitting: false,
+    sourcemap: true
 });

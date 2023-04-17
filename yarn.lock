@@ -1804,24 +1804,7 @@
     memoizerific "^1.11.3"
     ts-dedent "^2.0.0"
 
-"@storybook/addon-controls@7.0.5":
-  version "7.0.5"
-  resolved "https://registry.npmjs.org/@storybook/addon-controls/-/addon-controls-7.0.5.tgz"
-  integrity sha512-Fd3aUmFQ4iBfvpVrQ+rNi7PBgencxrvHx1CG6gtx27D8TKwb/y7iuel2ru6X1Qz/kvQcZl06ZB86zH+QljK9/w==
-  dependencies:
-    "@storybook/blocks" "7.0.5"
-    "@storybook/client-logger" "7.0.5"
-    "@storybook/components" "7.0.5"
-    "@storybook/core-common" "7.0.5"
-    "@storybook/manager-api" "7.0.5"
-    "@storybook/node-logger" "7.0.5"
-    "@storybook/preview-api" "7.0.5"
-    "@storybook/theming" "7.0.5"
-    "@storybook/types" "7.0.5"
-    lodash "^4.17.21"
-    ts-dedent "^2.0.0"
-
-"@storybook/addon-controls@^7.0.5":
+"@storybook/addon-controls@7.0.5", "@storybook/addon-controls@^7.0.5":
   version "7.0.5"
   resolved "https://registry.yarnpkg.com/@storybook/addon-controls/-/addon-controls-7.0.5.tgz#72f6d2fddfcda973bf8736f292090f9232b484e5"
   integrity sha512-Fd3aUmFQ4iBfvpVrQ+rNi7PBgencxrvHx1CG6gtx27D8TKwb/y7iuel2ru6X1Qz/kvQcZl06ZB86zH+QljK9/w==
