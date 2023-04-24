@@ -1,14 +1,10 @@
-# .github/workflows/chromatic.yml
-# Workflow name
-name: 'Chromatic'
-# Event workflow
+name : Build Chromatic on PR
 on:
-  push:
-    branches:
-      - main
-# List of jobs
+  pull_request:
+    types: [opened, synchronize]
 jobs:
-  chromatic-deployment:
+  chromatic-deployment-on-pr:
+    if: ${{ github.event.pull_request.base.ref == 'main'}}
     runs-on: ubuntu-latest
     # Job steps
     steps:
