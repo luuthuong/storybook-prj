@@ -1,4 +1,4 @@
-import { BaseColorType, BaseSizeType } from "@core/types";
+import { BaseColorType, BaseSizeType } from "../../types";
 
 export type CheckboxSize = BaseSizeType;
 export type CheckboxColor = BaseColorType;
