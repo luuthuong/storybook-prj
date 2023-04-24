@@ -38,6 +38,12 @@ export const Secondary: Story ={
         color: 'secondary'
     }
 }
+export const Success: Story ={
+    args:{
+        color: 'success'
+    }
+}
+
 export const Error: Story ={
     args:{
         color: 'error'
