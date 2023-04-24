@@ -9,7 +9,7 @@
     "lint": "eslint \"**/*.ts*\"",
     "clean": "rm -rf .turbo && rm -rf node_modules && rm -rf dist && rm -rf storybook-static",
     "preview": "serve storybook-static -p 8000",
-    "chromatic": "npx chromatic --build-script-name build --project-token=a94ae40f54c4"
+    "chromatic": "npx chromatic --build-script-name build --project-token=CHROMATIC_PROJECT_TOKEN"
   },
   "dependencies": {
     "next": "latest",
