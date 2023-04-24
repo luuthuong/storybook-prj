@@ -2,7 +2,14 @@
 # Workflow name
 name: 'Chromatic'
 # Event workflow
-on: push
+on:
+  pull_request:
+    branches:
+      - main
+    types: [ opened, synchronize ]
+  push:
+    branches:
+      - main
 # List of jobs
 jobs:
   chromatic-deployment:
