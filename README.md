@@ -1,6 +1,4 @@
-# Turborepo Design System Starter
-
-This guide explains how to use a React design system starter powered by:
+ Explain how to use a React design system starter powered by:
 
 - 🏎 [Turborepo](https://turbo.build/repo) — High-performance build system for Monorepos
 - 🚀 [React](https://reactjs.org/) — JavaScript library for user interfaces
@@ -14,14 +12,6 @@ As well as a few others tools preconfigured:
 - [Prettier](https://prettier.io) for code formatting
 - [Changesets](https://github.com/changesets/changesets) for managing versioning and changelogs
 - [GitHub Actions](https://github.com/changesets/action) for fully automated package publishing
-
-## Using this example
-
-Run the following command:
-
-```sh
-npx create-turbo@latest -e design-system
-```
 
 ### Useful Commands
 
@@ -43,9 +33,8 @@ This Turborepo includes the following packages and applications:
 
 - `apps/docs`: Component documentation site with Storybook
 - `packages/core`: Core React components
-- `packages/utils`: Shared React utilities
 - `packages/tsconfig`: Shared `tsconfig.json`s used throughout the Turborepo
-- `packages/eslint-config`: ESLint preset
+- `packages/eslint-config-custom`: ESLint preset
 
 Each package and app is 100% [TypeScript](https://www.typescriptlang.org/). Workspaces enables us to "hoist" dependencies that are shared between packages to the root `package.json`. This means smaller `node_modules` folders and a better local dev experience. To install a dependency for the entire monorepo, use the `-w` workspaces flag with `yarn add`.
 
@@ -81,6 +70,9 @@ Run `yarn build` to confirm compilation is working correctly. You should see a f
 ```bash
 core
 └── dist
+    ├── components/ <-- Folder contains components react
+    ├── types/      <-- Folder contains types react
+    ├── provider/   <-- Folder contains providers react
     ├── index.d.ts  <-- Types
     ├── index.js    <-- CommonJS version
     └── index.mjs   <-- ES Modules version
